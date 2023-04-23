@@ -1,0 +1,54 @@
+﻿@page
+@model ApiDevExtreme.Pages.Qualities.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Quality</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Quality.MetricName" class="control-label"></label>
+                <input asp-for="Quality.MetricName" class="form-control" />
+                <span asp-validation-for="Quality.MetricName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quality.CurrentValue" class="control-label"></label>
+                <input asp-for="Quality.CurrentValue" class="form-control" />
+                <span asp-validation-for="Quality.CurrentValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quality.TargetValue" class="control-label"></label>
+                <input asp-for="Quality.TargetValue" class="form-control" />
+                <span asp-validation-for="Quality.TargetValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quality.Weight" class="control-label"></label>
+                <input asp-for="Quality.Weight" class="form-control" />
+                <span asp-validation-for="Quality.Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quality.Description" class="control-label"></label>
+                <input asp-for="Quality.Description" class="form-control" />
+                <span asp-validation-for="Quality.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

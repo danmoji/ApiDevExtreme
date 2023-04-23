@@ -1,0 +1,49 @@
+﻿@page
+@model ApiDevExtreme.Pages.Qualities.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Quality</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quality.MetricName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quality.MetricName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quality.CurrentValue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quality.CurrentValue)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quality.TargetValue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quality.TargetValue)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quality.Weight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quality.Weight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quality.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quality.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Quality?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
